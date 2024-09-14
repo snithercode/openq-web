@@ -1,3 +1,36 @@
+/* Define color variables */
+:root {
+  --color-purple-light: #4704A4;
+  --color-purple-dark: #1D0045;
+  --color-purple-dark-muted: #131018;
+  --color-red: #FF5555;
+  --color-dark-red: #A60909;
+  --color-orange: #FFA855;
+  --color-green: #43C82E;
+  --color-background: #09060C;
+  --color-background-secondary: #131018;
+  --color-white: #FFFFFF;
+  /* Add more custom colors as needed */
+}
+
+/* Existing Tailwind directives */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer components {
+    .btn {
+        @apply px-4 py-2 rounded-sm border border-white text-white bg-transparent 
+               transition-colors duration-300 ease-in-out;
+    }
+    .btn:hover {
+        @apply border-red;
+    }
+
+}
+
+@layer base {
+  html {
+    @apply text-white;
+  }
+}
